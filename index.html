@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Voting & eVoting Platform Login</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            /* justify-content: center; */
+        }
+        body{
+            background-color: #a50001;
+            height: 850px;
+        }
+        header{
+            /* position: sticky; */
+            /* display: ; */
+            margin: 0;
+            padding: 0;
+            width: auto;
+            height: 80px;
+            color: white;
+            background-color: black;
+            /* float: right; */
+            align-content: center;
+        }
+        header table tr td:hover{
+            color: red;
+        }
+        header table{
+            float: right;
+            font-size: large;
+        }
+        .head{
+            background-color: #bb9e22;
+            height: 30px;
+            color: white;
+        }
+        .head table{
+            justify-self: center;
+        }
+        .head table tr td{
+            padding-left: 40px;
+            font-size: larger;
+            font-weight: bolder;
+        } 
+        .body{
+            height: 600px;
+            width: 1000px;
+            margin-top: 50px;
+            border-radius: 30px;
+            background-color: white;
+            justify-self: center;
+            /* align-self: center; */
+        }
+        .body .left{
+            float: inline-start;
+            background-color: black;
+            height: 600px;
+            width: 50%;
+            border-radius: 30px 0 0 30px;
+        }
+        .body .right{
+            float: inline-end; 
+            /* text-align: center; */
+            height: auto;
+            /* justify-content: center; */
+            border-radius: 30px;
+            padding-right: 40px;
+        }
+        .containt{
+            position: absolute;
+            margin-left: 170px;
+            margin-top: 50px;
+            padding: 10px;
+            border: 0.5px solid whitesmoke;
+            border-radius: 100px;
+            box-shadow: gray 0px 0px 10px;
+            align-content: center;
+            background-color: #ffffff;
+            z-index: 2;
+        }
+        .body .right .circle{
+            padding: 15px;
+            border-radius: 100px;
+            align-content: center;
+            background-color: #bb9e22;
+            color: white;
+        }
+        .info{
+            margin-top: 70px;
+            position: relative;
+            height: 35px;
+            width: 420px;
+            color: white;
+            background-color: aqua;
+            z-index: 1;
+        }
+        .info .l{
+            background-color: #cc0000;
+            height: 100%;
+            width: 50%;
+            text-align: center;
+            /* justify-content: center; */
+            align-content: center;
+        }
+        .info .r{
+            /* display: inline; */
+            background-color: #c1c1c1;
+            margin-top: -35px;
+            float: inline-end;
+            height: 100%;
+            width: 50%;
+            /* color: black; */
+            text-align: center;
+            /* justify-content: center; */
+            align-content: center;
+        }
+        .login{
+            margin-top: 50px;
+        }
+        #emailid{
+            /* width: 200px; */
+            /* height: 60%; */
+            font-size: large;
+            padding: 10px;
+            /* font-weight: bold; */
+            /* color: #a50001; */
+        }
+        .btn{
+            margin-top: 120px;
+            height: 50px;
+            width: 120px;
+            border-radius: 50px;
+            text-decoration: none;
+            border: 0;
+            background-color: #cc0000;
+            color: white;
+            font-weight: bolder;
+            font-size: large;
+        }
+        #check1 , #check2{
+            height: 20px;
+            width: 20px;
+            background-color: #a50001;
+        }
+        /* input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+        } */
+
+        label {
+            font-size: 22px; /* Adjust font size */
+            margin-left: 5px;
+            margin-top: -10px;
+            padding-top: -10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://dymk4s89vutua.cloudfront.net/wp-content/uploads/2019/05/r2v.png?x60899" style="padding: 20px;" alt="vote">
+        <table cellspacing="30px" cellpadding="50px">
+            <tr>
+                <td>Home</td>
+                <td>About Us</td>
+                <td>Mobile Voting</td>
+                <td>Features</td>
+                <td>Services</td>
+                <td>Pricing</td>
+                <td>Contact Us</td>  
+                <td><span style="background-color: #cc0000; color: white; padding: 10px;">Login</span></td>
+            </tr>
+        </table>
+    </header>
+    <div class="head">
+        <table cellspacing="5px" cellpadding="50px">
+            <tr>
+                <td>eVoting</td>
+                <td>eAGM</td>
+                <td>eAuction</td>
+                <td>eDataRoom</td>
+            </tr>
+        </table>
+    </div>
+    <div class="body">
+        <div class="left">
+            <img src="https://right2vote.in/wp-content/plugins/r2v-api/images/logos/r2vlogo.webp?x69791" height="100%" width="100%" style="border-radius: 30px;">
+        </div>
+        <div class="right">
+            <div class="containt">
+                <div class="circle">OR</div>
+            </div>
+            <div class="info">
+                <div class="l">Email Id</div>
+                <div class="r">Mobile No</div>
+            </div>
+            <div class="login">
+            <form name="f1">
+                <span><b>Email Id</b></span><br>
+                <input name="emailid" id="emailid" type="text" placeholder="Enter email address" value="" autofocus size="39" height="100"><br>
+                <center><button class="btn">GET OTP</button></center><br>
+                <input id="check1" type="checkbox" value="1" onclick="cal(this)" checked><label>Voter Login</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input id="check2" type="checkbox" value="1" onclick="cal(this)"><label>Admin Login</label>
+            </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function cal(clickedCheckbox) {
+            // Get all checkboxes in the form
+            const checkboxes = document.querySelectorAll('form input[type="checkbox"]');
+
+            // Uncheck all checkboxes
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = false;
+            });
+
+            // Check the clicked checkbox
+            clickedCheckbox.checked = true;
+        }
+</script>
+</html>
